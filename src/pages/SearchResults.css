@@ -1,0 +1,201 @@
+/* ─────────────────────────────────────────────
+   ORYON – Search Results | SearchResults.css
+───────────────────────────────────────────── */
+
+.search-page {
+  min-height: 100vh;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ── Toast ── */
+.search-toast {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 999;
+  background: #0abfb8;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* ── Header ── */
+.search-header {
+  padding: 40px 80px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+}
+
+.search-header h1 span {
+  color: #0abfb8;
+}
+
+.search-header p {
+  font-size: 13.5px;
+  color: #888;
+  margin: 0;
+}
+
+/* ── Section ── */
+.search-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 80px 80px;
+}
+
+/* ── Messages ── */
+.search-msg {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  padding: 60px 0;
+}
+
+/* ── Empty ── */
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.search-empty button {
+  background: none;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 9px 24px;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.2s;
+}
+
+.search-empty button:hover {
+  border-color: #0abfb8;
+  color: #0abfb8;
+}
+
+/* ── Grid ── */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ── Card ── */
+.search-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+
+.search-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+  transform: translateY(-2px);
+}
+
+/* ── Image ── */
+.search-card-img {
+  background: #f5f5f5;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.search-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.search-card:hover .search-card-img img {
+  transform: scale(1.05);
+}
+
+.search-card-noimg {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* ── Body ── */
+.search-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.search-card-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.search-card-cat {
+  font-size: 11.5px;
+  color: #aaa;
+  margin: 0;
+}
+
+.search-card-price {
+  font-size: 13px;
+  color: #0abfb8;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+/* ── Cart button ── */
+.search-card-btn {
+  background: #0abfb8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-card-btn:hover {
+  background: #089990;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .search-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .search-header { padding: 32px 24px 20px; }
+  .search-section { padding: 32px 24px 60px; }
+  .search-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+@media (max-width: 500px) {
+  .search-grid { grid-template-columns: 1fr; }
+}
